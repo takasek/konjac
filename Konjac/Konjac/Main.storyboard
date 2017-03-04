@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="810.39999999999998" y="124.58770614692655"/>
         </scene>
-        <!--View Controller-->
+        <!--Phrases View Controller-->
         <scene sceneID="qVg-Zw-Cgb">
             <objects>
-                <viewController id="KQr-pe-Lrg" sceneMemberID="viewController">
+                <viewController id="KQr-pe-Lrg" customClass="PhrasesViewController" customModule="Konjac" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="32B-Gc-8eh"/>
                         <viewControllerLayoutGuide type="bottom" id="77R-Fc-rNZ"/>
@@ -111,6 +111,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-Ir-xxq">
                                 <rect key="frame" x="0.0" y="112" width="375" height="555"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KQr-pe-Lrg" id="Pz5-AY-5Ma"/>
+                                    <outlet property="delegate" destination="KQr-pe-Lrg" id="ear-Yp-cNH"/>
+                                </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="siW-4v-rn9">
                                 <rect key="frame" x="30" y="74" width="315" height="29"/>
@@ -132,6 +136,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="segmentControl" destination="siW-4v-rn9" id="xIb-FH-hFo"/>
+                        <outlet property="tableView" destination="fwU-Ir-xxq" id="dsk-sa-Z9F"/>
                         <segue destination="DEC-Yq-eQL" kind="presentation" id="PHz-jh-ooN"/>
                     </connections>
                 </viewController>
