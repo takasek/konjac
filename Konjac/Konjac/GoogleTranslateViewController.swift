@@ -14,7 +14,7 @@ final class GoogleTranslater {
     func tranlate(source: String, completion: @escaping (String?) -> Void) {
 
         let encodedSource = source.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? ""
-        let urlString = "https://www.googleapis.com/language/translate/v2?key=AIzaSyBZomq_Mw-KA5UMteg7erVvyhYcYI1bkKw&target=ja&q=\(encodedSource)"
+        let urlString = "https://www.googleapis.com/language/translate/v2?key=AIzaSyBZomq_Mw-KA5UMteg7erVvyhYcYI1bkKw&target=en&q=\(encodedSource)"
 
         guard let url = URL(string: urlString) else {
             completion(nil)
@@ -25,9 +25,13 @@ final class GoogleTranslater {
             if let jsonData = data,
                 let json = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) {
                 let result = JSON(json)["data"]["translations"][0]["translatedText"].string
-                completion(result)
+                DispatchQueue.main.async {
+                    completion(result)
+                }
             } else {
-                completion(nil)
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
             }
         }
         task?.resume()
