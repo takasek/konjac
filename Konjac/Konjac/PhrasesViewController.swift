@@ -65,11 +65,29 @@ class PhrasesViewController: UIViewController {
     }
 
     func filteredModelArray() -> [KonjacModel] {
-        return KonjacFirebase.sharedInstance.konjacSnaps.filter { model in
+        let arr = KonjacFirebase.sharedInstance.konjacSnaps.filter { model in
             model.english != nil
         }
+        var d: [String: KonjacModel] = [:]
+        for m in arr {
+            if let e = m.english {
+                d[e] = m
+            }
+        }
+        return Array(d.values)
     }
+}
 
+extension Array where Element : Equatable {
+    var unique: [Element] {
+        var uniqueValues: [Element] = []
+        forEach { item in
+            if !uniqueValues.contains(item) {
+                uniqueValues += [item]
+            }
+        }
+        return uniqueValues
+    }
 }
 
 extension PhrasesViewController: UITableViewDelegate {
