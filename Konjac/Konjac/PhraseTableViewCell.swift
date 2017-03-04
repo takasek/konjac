@@ -11,7 +11,7 @@ import UIKit
 class PhraseTableViewCell: UITableViewCell {
     @IBOutlet weak var mainPhrase: UILabel!
     @IBOutlet weak var subPhrase: UILabel!
-
+    var speaker: Speaker?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +21,15 @@ class PhraseTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        // This should be handled when presented, not here anymore
+//        if selected, let speaker = self.speaker, let text = self.mainPhrase.text {
+//            speaker.speak(str: text) { range in
+//                let mutableString = NSMutableAttributedString(string: text)
+//                if let r = range {
+//                    mutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: r)
+//                }
+//                self.mainPhrase.attributedText = mutableString
+//            }
+//        }
     }
-    
 }

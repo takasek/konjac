@@ -106,6 +106,7 @@ PODS:
   - GTMSessionFetcher/Full (1.1.8):
     - GTMSessionFetcher/Core (= 1.1.8)
   - Protobuf (3.2.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Firebase/AdMob
@@ -115,6 +116,7 @@ DEPENDENCIES:
   - Firebase/Invites
   - Firebase/RemoteConfig
   - Firebase/Storage
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
@@ -135,7 +137,8 @@ SPEC CHECKSUMS:
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   Protobuf: 745f59e122e5de98d4d7ef291e264a0eef80f58e
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: c3606c0af9a7cf3648ac804181d5a3623e23d017
+PODFILE CHECKSUM: 25d65919981b084c3eb9efd8898285a8ea15a539
 
 COCOAPODS: 1.2.0

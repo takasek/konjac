@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
-class RikoModalViewController: UIViewController {
+class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
     @IBOutlet weak var phraseLabel: UILabel!
+
+    var phrase: String?
+
+    lazy var speaker = Speaker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.6)
         // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        guard let s = self.phrase else { return }
+        self.speaker.speak(str: s, delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +39,34 @@ class RikoModalViewController: UIViewController {
     }
 
     @IBAction func stopTap(_ sender: Any) {
+        self.speaker.stop()
     }
     @IBAction func pauseResume(_ sender: Any) {
+        self.speaker.pauseResume()
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didPause utterance: AVSpeechUtterance) {
+        self.updatePauseResumeButton()
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        self.updatePauseResumeButton()
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didContinue utterance: AVSpeechUtterance) {
+        self.updatePauseResumeButton()
+    }
+
+    func updatePauseResumeButton() {
+        // FIXME
     }
 
 
