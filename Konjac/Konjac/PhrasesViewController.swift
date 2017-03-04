@@ -39,7 +39,13 @@ class PhrasesViewController: UIViewController {
 }
 
 extension PhrasesViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "RikoModalViewStoryboard", bundle: Bundle.main)
+        let viewController = storyboard.instantiateInitialViewController() as! RikoModalViewController
+        let rootViewController = UIApplication.shared.delegate?.window!?.rootViewController
+        rootViewController!.modalPresentationStyle = UIModalPresentationStyle.currentContext
+        present(viewController, animated: true)
+    }
 }
 
 extension PhrasesViewController: UITableViewDataSource {
