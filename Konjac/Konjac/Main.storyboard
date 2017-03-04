@@ -71,7 +71,6 @@
                                 <state key="normal" title="MainView"/>
                                 <connections>
                                     <action selector="transitTomainViewTap:" destination="BXj-Y0-s3t" eventType="touchUpInside" id="TLm-Oi-JnE"/>
-                                    <segue destination="KQr-pe-Lrg" kind="show" id="h6x-QW-x1h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,6 +89,7 @@
                         <outlet property="transitToMainView" destination="IxJ-EP-jro" id="qfY-Tr-piO"/>
                         <outlet property="transitToSpeechTest" destination="Dq1-lp-vvA" id="3Px-sn-kHB"/>
                         <outlet property="transitToTranslate" destination="vvc-WN-PKv" id="nbQ-03-nM3"/>
+                        <segue destination="KQr-pe-Lrg" kind="show" id="TfB-vi-Rw4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1t-Rd-Lqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,7 +99,7 @@
         <!--Phrases View Controller-->
         <scene sceneID="qVg-Zw-Cgb">
             <objects>
-                <viewController id="KQr-pe-Lrg" customClass="PhrasesViewController" customModule="Konjac" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhrasesViewController" id="KQr-pe-Lrg" customClass="PhrasesViewController" customModule="Konjac" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="32B-Gc-8eh"/>
                         <viewControllerLayoutGuide type="bottom" id="77R-Fc-rNZ"/>
@@ -138,7 +138,7 @@
                     <connections>
                         <outlet property="segmentControl" destination="siW-4v-rn9" id="xIb-FH-hFo"/>
                         <outlet property="tableView" destination="fwU-Ir-xxq" id="dsk-sa-Z9F"/>
-                        <segue destination="DEC-Yq-eQL" kind="presentation" id="PHz-jh-ooN"/>
+                        <segue destination="DEC-Yq-eQL" kind="presentation" id="IfI-Zo-Iwu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHF-xj-ajr" userLabel="First Responder" sceneMemberID="firstResponder"/>

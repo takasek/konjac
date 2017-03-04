@@ -14,8 +14,9 @@ class PhrasesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.register(UINib(nibName: "PhraseTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        tableView.estimatedRowHeight = 200
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +47,7 @@ extension PhrasesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell(frame: CGRect.zero)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! PhraseTableViewCell
+        return cell
     }
 }

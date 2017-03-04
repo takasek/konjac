@@ -8,9 +8,10 @@
 
 import UIKit
 
-class PhrasesTableViewCell: UITableViewCell {
+class PhraseTableViewCell: UITableViewCell {
     @IBOutlet weak var mainPhrase: UILabel!
     @IBOutlet weak var subPhrase: UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
