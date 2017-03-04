@@ -1,7 +1,107 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nxg-od-EDa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="ElH-Em-66R">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Nxg-od-EDa" customClass="GoogleTranslateViewController" customModule="Konjac" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a9z-jq-nn7"/>
+                        <viewControllerLayoutGuide type="bottom" id="aCj-LG-LeL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="20B-n4-Kp3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ssN-F6-iFm">
+                                <rect key="frame" x="16" y="98" width="343" height="176"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-Dj-F0A">
+                                <rect key="frame" x="16" y="433" width="343" height="84"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxN-dx-YiI">
+                                <rect key="frame" x="16" y="69" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2s-S2-b5V">
+                                <rect key="frame" x="16" y="404" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTZ-OF-JLy">
+                                <rect key="frame" x="155" y="318" width="64" height="30"/>
+                                <state key="normal" title="Translate"/>
+                                <connections>
+                                    <action selector="translateButtonDidTap:" destination="Nxg-od-EDa" eventType="touchUpInside" id="QBo-bG-CsZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MxN-dx-YiI" firstAttribute="leading" secondItem="ssN-F6-iFm" secondAttribute="leading" id="251-Bo-8G5"/>
+                            <constraint firstItem="aCj-LG-LeL" firstAttribute="top" secondItem="0Eb-Dj-F0A" secondAttribute="bottom" constant="106" id="6FA-oH-4kx"/>
+                            <constraint firstItem="bTZ-OF-JLy" firstAttribute="centerY" secondItem="20B-n4-Kp3" secondAttribute="centerY" id="ADY-l0-KT0"/>
+                            <constraint firstItem="ssN-F6-iFm" firstAttribute="centerX" secondItem="bTZ-OF-JLy" secondAttribute="centerX" id="Auz-mF-P0x"/>
+                            <constraint firstItem="ssN-F6-iFm" firstAttribute="trailing" secondItem="20B-n4-Kp3" secondAttribute="trailingMargin" id="HiL-Lu-bml"/>
+                            <constraint firstItem="R2s-S2-b5V" firstAttribute="leading" secondItem="0Eb-Dj-F0A" secondAttribute="leading" id="O1W-hB-v8w"/>
+                            <constraint firstItem="bTZ-OF-JLy" firstAttribute="top" secondItem="ssN-F6-iFm" secondAttribute="bottom" constant="44" id="PZ9-8e-13A"/>
+                            <constraint firstItem="ssN-F6-iFm" firstAttribute="trailing" secondItem="0Eb-Dj-F0A" secondAttribute="trailing" id="S6N-4X-OzV"/>
+                            <constraint firstItem="MxN-dx-YiI" firstAttribute="top" secondItem="a9z-jq-nn7" secondAttribute="bottom" constant="49" id="SFS-uZ-MSA"/>
+                            <constraint firstItem="MxN-dx-YiI" firstAttribute="leading" secondItem="20B-n4-Kp3" secondAttribute="leadingMargin" id="Zrt-6i-6eA"/>
+                            <constraint firstItem="ssN-F6-iFm" firstAttribute="leading" secondItem="R2s-S2-b5V" secondAttribute="leading" id="Ztd-il-iO1"/>
+                            <constraint firstItem="0Eb-Dj-F0A" firstAttribute="top" secondItem="R2s-S2-b5V" secondAttribute="bottom" constant="8" symbolic="YES" id="a7d-Kk-50o"/>
+                            <constraint firstItem="ssN-F6-iFm" firstAttribute="top" secondItem="MxN-dx-YiI" secondAttribute="bottom" constant="8" symbolic="YES" id="tfl-q4-cXn"/>
+                            <constraint firstItem="0Eb-Dj-F0A" firstAttribute="top" secondItem="bTZ-OF-JLy" secondAttribute="bottom" constant="85" id="vOV-EH-vhl"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="n4P-Qn-MGz" appends="YES" id="DEW-UI-6SN"/>
+                        </connections>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="Gre-Vf-YNN"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Title" id="yRb-F0-IXV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="X0Y-hh-8C0">
+                            <connections>
+                                <action selector="saveDidTap:" destination="Nxg-od-EDa" id="1Yu-CS-O56"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="destinationTextView" destination="0Eb-Dj-F0A" id="mqs-pH-dsj"/>
+                        <outlet property="sourceTextView" destination="ssN-F6-iFm" id="gDZ-SQ-CBd"/>
+                        <outlet property="translateButton" destination="bTZ-OF-JLy" id="RgL-8E-WEa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lx4-EL-avc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="n4P-Qn-MGz">
+                    <connections>
+                        <action selector="viewDidTap:" destination="Nxg-od-EDa" id="Vnm-Ij-kFf"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-770.39999999999998" y="78.710644677661179"/>
+        </scene>
+    </scenes>
 </document>

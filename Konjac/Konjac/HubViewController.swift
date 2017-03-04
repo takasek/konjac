@@ -29,7 +29,11 @@ class HubViewController: UIViewController {
     @IBAction func transitToTranslateTap(_ sender: Any) {
         // implement codes to transit to translate
         print("i wanna go to transit view...")
+
+        let vc = UIStoryboard(name: "GoogleTranslate", bundle: .main).instantiateInitialViewController()!
+        navigationController?.pushViewController(vc, animated: true)
     }
+
     @IBAction func transitToSpeechTestTap(_ sender: Any) {
         // implement codes to transit to speech
         print("i wanna go to speech view...")
