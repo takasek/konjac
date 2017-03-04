@@ -18,6 +18,14 @@ class PhrasesViewController: UIViewController {
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableViewAutomaticDimension
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let selectedRow = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: selectedRow, animated: true)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
