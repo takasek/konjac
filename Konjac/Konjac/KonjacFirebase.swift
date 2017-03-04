@@ -11,14 +11,14 @@ import Foundation
 import Firebase
 import GoogleSignIn
 
-class KonjacFirebase: NSObject {
+final class KonjacFirebase: NSObject {
     
-    var handle: FIRAuthStateDidChangeListenerHandle?
-    var ref: FIRDatabaseReference!
-    var messages: [FIRDataSnapshot]! = []
-    var msglength: NSNumber = 10
+    private var handle: FIRAuthStateDidChangeListenerHandle?
+    private var ref: FIRDatabaseReference!
+    private var messages: [FIRDataSnapshot] = []
+    private var msglength: NSNumber = 10
     fileprivate var _refHandle: FIRDatabaseHandle!
-    var konjacHandler: (([KonjacModel]) -> Void)?
+    private var konjacHandler: (([KonjacModel]) -> Void)?
     var konjacSnaps: [KonjacModel] = []
 
     static let sharedInstance: KonjacFirebase = {
@@ -28,6 +28,7 @@ class KonjacFirebase: NSObject {
         instance.handle = FIRAuth.auth()?.addStateDidChangeListener() { (auth, user) in
             if user != nil {
                 print("succeeded to login..")
+                KonjacFirebase.sharedInstance.configureDatabase()
             }
         }
         
@@ -57,11 +58,11 @@ class KonjacFirebase: NSObject {
         self.konjacHandler = completion
     }
     
-    func sendNewKonjac(newKonjac: KonjacModel) {
+    func sendNewKonjac(question: String?, japanese: String?, english: String?) {
         var mdata = [String : String]()
-        mdata["question"] = newKonjac.question
-        mdata["japanese"] = newKonjac.japanese
-        mdata["english"] = newKonjac.english
+        mdata["question"] = question
+        mdata["japanese"] = japanese
+        mdata["english"] = english
 
         self.ref.child("phrases").childByAutoId().setValue(mdata)
     }

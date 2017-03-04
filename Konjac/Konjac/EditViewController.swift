@@ -14,7 +14,12 @@ class EditViewController: UIViewController {
     @IBOutlet weak var situationPicker: UIPickerView!
     
     let situations = ["なんか場所を聞かれた時", "技術系", "観光地系", "食べ物系", "文化風習系", "アニメ系"]
-    
+
+    var selectedSituation: String {
+        let row = situationPicker.selectedRow(inComponent: 0)
+        return situations[row]
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +32,11 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func registerButtonTap(_ sender: Any) {
+        KonjacFirebase.sharedInstance.sendNewKonjac(
+            question: selectedSituation,
+            japanese: japaneseTextView.text,
+            english: englishTextView.text
+        )
     }
 
     /*
