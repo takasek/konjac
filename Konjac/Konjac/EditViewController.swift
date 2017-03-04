@@ -49,6 +49,19 @@ class EditViewController: UIViewController {
     }
     */
 
+    let translater = GoogleTranslater()
+    @IBAction func didTapTranslate() {
+        translater.tranlate(source: japaneseTextView.text ?? "", completion: { [weak self] in
+            if let text = $0 {
+                self?.englishTextView.text = $0
+            }
+        })
+    }
+
+    @IBAction func resign() {
+        view.endEditing(true)
+    }
+
 }
 
 extension EditViewController: UIPickerViewDelegate {

@@ -121,6 +121,14 @@
                                                     <action selector="registerButtonTap:" destination="ueu-ZX-sYI" eventType="touchUpInside" id="M9D-OG-rau"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEz-tw-dl7">
+                                                <rect key="frame" x="298" y="120" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="翻訳"/>
+                                                <connections>
+                                                    <action selector="didTapTranslate" destination="ueu-ZX-sYI" eventType="touchUpInside" id="Bsb-ky-cRs"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -148,6 +156,9 @@
                                     <constraint firstAttribute="bottom" secondItem="DzD-OM-2e8" secondAttribute="bottom" id="qgZ-a4-ZXf"/>
                                     <constraint firstItem="BDZ-Fd-68Q" firstAttribute="leading" secondItem="u65-Cr-Znz" secondAttribute="leading" id="w0a-oi-rBb"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cq3-V8-216" appends="YES" id="vjo-90-IuW"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,6 +176,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Irk-Gz-Akw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cq3-V8-216">
+                    <connections>
+                        <action selector="resign" destination="ueu-ZX-sYI" id="7wf-K6-P5I"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="72.799999999999997" y="143.47826086956522"/>
         </scene>
