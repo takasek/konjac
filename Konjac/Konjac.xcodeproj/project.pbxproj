@@ -27,6 +27,7 @@
 		B631AE791E6A5579007B2125 /* KonjacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE781E6A5579007B2125 /* KonjacTests.swift */; };
 		E7CB6CBFEB7BE60CB285E528 /* Pods_Konjac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C954629B873DCB931AC6EE /* Pods_Konjac.framework */; };
 		E9EED6221E6A786D00118C37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9EED6211E6A786D00118C37 /* GoogleService-Info.plist */; };
+		E9EED6241E6A9D8700118C37 /* KonjacFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EED6231E6A9D8700118C37 /* KonjacFirebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		B631AE781E6A5579007B2125 /* KonjacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonjacTests.swift; sourceTree = "<group>"; };
 		B631AE7A1E6A5579007B2125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9EED6211E6A786D00118C37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9EED6231E6A9D8700118C37 /* KonjacFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KonjacFirebase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				B631AE6F1E6A5579007B2125 /* Info.plist */,
 				B2C9A26E1E6A7E9500AC0B14 /* PhrasesViewController.swift */,
 				B2C9A27C1E6A96E200AC0B14 /* RikoModalViewStoryboard.storyboard */,
+				E9EED6231E6A9D8700118C37 /* KonjacFirebase.swift */,
 			);
 			path = Konjac;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EED6241E6A9D8700118C37 /* KonjacFirebase.swift in Sources */,
 				B2C9A26A1E6A694800AC0B14 /* UIButton+CornerRadius.swift in Sources */,
 				B631AE661E6A5579007B2125 /* ViewController.swift in Sources */,
 				B2C9A2721E6A804800AC0B14 /* PhraseTableViewCell.swift in Sources */,
