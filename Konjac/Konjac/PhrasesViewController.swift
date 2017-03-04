@@ -18,6 +18,14 @@ class PhrasesViewController: UIViewController {
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableViewAutomaticDimension
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let selectedRow = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: selectedRow, animated: true)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,10 +48,11 @@ class PhrasesViewController: UIViewController {
 extension PhrasesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "RikoModalViewStoryboard", bundle: Bundle.main)
-        let viewController = storyboard.instantiateInitialViewController() as! RikoModalViewController
+        let riko = storyboard.instantiateInitialViewController() as! RikoModalViewController
+        riko.phrase = "asta la vista babies" // FIXME: use real data!
         let rootViewController = UIApplication.shared.delegate?.window!?.rootViewController
         rootViewController!.modalPresentationStyle = UIModalPresentationStyle.currentContext
-        present(viewController, animated: true)
+        present(riko, animated: true)
     }
 }
 
