@@ -11,6 +11,7 @@ import UIKit
 class PhrasesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
+    lazy var speaker = Speaker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,7 @@ extension PhrasesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! PhraseTableViewCell
+        cell.speaker = self.speaker
         return cell
     }
 }
