@@ -22,6 +22,8 @@
 		B631AE6B1E6A5579007B2125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B631AE6A1E6A5579007B2125 /* Assets.xcassets */; };
 		B631AE6E1E6A5579007B2125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B631AE6C1E6A5579007B2125 /* LaunchScreen.storyboard */; };
 		B631AE791E6A5579007B2125 /* KonjacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE781E6A5579007B2125 /* KonjacTests.swift */; };
+		B646F5F11E6A870E00BD5822 /* GoogleTranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B646F5F01E6A870E00BD5822 /* GoogleTranslateViewController.swift */; };
+		B646F5F31E6A871E00BD5822 /* GoogleTranslate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B646F5F21E6A871E00BD5822 /* GoogleTranslate.storyboard */; };
 		E7CB6CBFEB7BE60CB285E528 /* Pods_Konjac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C954629B873DCB931AC6EE /* Pods_Konjac.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		B631AE741E6A5579007B2125 /* KonjacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KonjacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B631AE781E6A5579007B2125 /* KonjacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonjacTests.swift; sourceTree = "<group>"; };
 		B631AE7A1E6A5579007B2125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B646F5F01E6A870E00BD5822 /* GoogleTranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleTranslateViewController.swift; sourceTree = "<group>"; };
+		B646F5F21E6A871E00BD5822 /* GoogleTranslate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GoogleTranslate.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 				B2C9A2681E6A694100AC0B14 /* Extensions */,
 				B631AE631E6A5579007B2125 /* AppDelegate.swift */,
 				B631AE651E6A5579007B2125 /* ViewController.swift */,
+				B646F5F01E6A870E00BD5822 /* GoogleTranslateViewController.swift */,
+				B646F5F21E6A871E00BD5822 /* GoogleTranslate.storyboard */,
 				B2C9A2621E6A690F00AC0B14 /* Main.storyboard */,
 				B631AE6A1E6A5579007B2125 /* Assets.xcassets */,
 				B2C9A2651E6A692200AC0B14 /* HubViewController.swift */,
@@ -210,6 +216,7 @@
 				TargetAttributes = {
 					B631AE5F1E6A5578007B2125 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 42U7855PYX;
 						ProvisioningStyle = Automatic;
 					};
 					B631AE731E6A5579007B2125 = {
@@ -243,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B646F5F31E6A871E00BD5822 /* GoogleTranslate.storyboard in Resources */,
 				B2C9A2631E6A690F00AC0B14 /* Main.storyboard in Resources */,
 				B631AE6E1E6A5579007B2125 /* LaunchScreen.storyboard in Resources */,
 				B2C9A2731E6A804800AC0B14 /* PhraseTableViewCell.xib in Resources */,
@@ -359,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C9A26A1E6A694800AC0B14 /* UIButton+CornerRadius.swift in Sources */,
+				B646F5F11E6A870E00BD5822 /* GoogleTranslateViewController.swift in Sources */,
 				B631AE661E6A5579007B2125 /* ViewController.swift in Sources */,
 				B2C9A2721E6A804800AC0B14 /* PhraseTableViewCell.swift in Sources */,
 				B2C9A26F1E6A7E9500AC0B14 /* PhrasesViewController.swift in Sources */,
@@ -497,6 +506,7 @@
 			baseConfigurationReference = 4191734C28D2350D1E4954E3 /* Pods-Konjac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42U7855PYX;
 				INFOPLIST_FILE = Konjac/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -511,6 +521,7 @@
 			baseConfigurationReference = 69426D6C746CCAE9B2A0B557 /* Pods-Konjac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 42U7855PYX;
 				INFOPLIST_FILE = Konjac/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -560,7 +571,7 @@
 				B631AE7C1E6A5579007B2125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		B631AE7D1E6A5579007B2125 /* Build configuration list for PBXNativeTarget "Konjac" */ = {
 			isa = XCConfigurationList;
@@ -569,7 +580,7 @@
 				B631AE7F1E6A5579007B2125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		B631AE801E6A5579007B2125 /* Build configuration list for PBXNativeTarget "KonjacTests" */ = {
 			isa = XCConfigurationList;
@@ -578,7 +589,7 @@
 				B631AE821E6A5579007B2125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
