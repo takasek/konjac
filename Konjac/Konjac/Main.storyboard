@@ -28,7 +28,7 @@
         <!--Hub View Controller-->
         <scene sceneID="GlW-cg-DGU">
             <objects>
-                <viewController id="BXj-Y0-s3t" customClass="HubViewController" customModule="avsynthTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BXj-Y0-s3t" customClass="HubViewController" customModule="Konjac" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cAN-6d-U8O"/>
                         <viewControllerLayoutGuide type="bottom" id="ZxX-cV-KJd"/>
@@ -89,11 +89,60 @@
                         <outlet property="transitToMainView" destination="IxJ-EP-jro" id="qfY-Tr-piO"/>
                         <outlet property="transitToSpeechTest" destination="Dq1-lp-vvA" id="3Px-sn-kHB"/>
                         <outlet property="transitToTranslate" destination="vvc-WN-PKv" id="nbQ-03-nM3"/>
+                        <segue destination="KQr-pe-Lrg" kind="show" id="TfB-vi-Rw4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1t-Rd-Lqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="810.39999999999998" y="124.58770614692655"/>
+        </scene>
+        <!--Phrases View Controller-->
+        <scene sceneID="qVg-Zw-Cgb">
+            <objects>
+                <viewController storyboardIdentifier="PhrasesViewController" id="KQr-pe-Lrg" customClass="PhrasesViewController" customModule="Konjac" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="32B-Gc-8eh"/>
+                        <viewControllerLayoutGuide type="bottom" id="77R-Fc-rNZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FQV-Y8-tOb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-Ir-xxq">
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KQr-pe-Lrg" id="Pz5-AY-5Ma"/>
+                                    <outlet property="delegate" destination="KQr-pe-Lrg" id="ear-Yp-cNH"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="siW-4v-rn9">
+                                <rect key="frame" x="30" y="74" width="315" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="siW-4v-rn9" firstAttribute="leading" secondItem="FQV-Y8-tOb" secondAttribute="leading" constant="30" id="9Tc-66-U3O"/>
+                            <constraint firstItem="fwU-Ir-xxq" firstAttribute="top" secondItem="siW-4v-rn9" secondAttribute="bottom" constant="10" id="Ojg-Xc-Nj6"/>
+                            <constraint firstItem="fwU-Ir-xxq" firstAttribute="leading" secondItem="FQV-Y8-tOb" secondAttribute="leading" id="PB1-MX-M7U"/>
+                            <constraint firstAttribute="trailing" secondItem="fwU-Ir-xxq" secondAttribute="trailing" id="epS-Qp-kAK"/>
+                            <constraint firstItem="77R-Fc-rNZ" firstAttribute="top" secondItem="fwU-Ir-xxq" secondAttribute="bottom" id="hur-w2-VDp"/>
+                            <constraint firstItem="siW-4v-rn9" firstAttribute="top" secondItem="32B-Gc-8eh" secondAttribute="bottom" constant="10" id="k2d-8A-YAh"/>
+                            <constraint firstAttribute="trailing" secondItem="siW-4v-rn9" secondAttribute="trailing" constant="30" id="n3C-Z0-5Gf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="siW-4v-rn9" id="xIb-FH-hFo"/>
+                        <outlet property="tableView" destination="fwU-Ir-xxq" id="dsk-sa-Z9F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHF-xj-ajr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556" y="114"/>
         </scene>
     </scenes>
 </document>

@@ -22,7 +22,8 @@ class HubViewController: UIViewController {
     
     @IBAction func transitTomainViewTap(_ sender: Any) {
         // implement codes to transit to mainview
-        print("i wanna go to main view...")
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "PhrasesViewController")
+        navigationController?.pushViewController(viewController!, animated: true)
     }
 
     @IBAction func transitToTranslateTap(_ sender: Any) {
