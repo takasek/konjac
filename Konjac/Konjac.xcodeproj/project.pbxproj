@@ -20,6 +20,8 @@
 		B2C9A2731E6A804800AC0B14 /* PhraseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C9A2711E6A804800AC0B14 /* PhraseTableViewCell.xib */; };
 		B2C9A2761E6A8B5D00AC0B14 /* RikoModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C9A2741E6A8B5D00AC0B14 /* RikoModalViewController.swift */; };
 		B2C9A27D1E6A96E200AC0B14 /* RikoModalViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C9A27C1E6A96E200AC0B14 /* RikoModalViewStoryboard.storyboard */; };
+		B2C9A27F1E6AA27200AC0B14 /* EditViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C9A27E1E6AA27200AC0B14 /* EditViewStoryboard.storyboard */; };
+		B2C9A2831E6AA59200AC0B14 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C9A2821E6AA59200AC0B14 /* EditViewController.swift */; };
 		B631AE641E6A5579007B2125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE631E6A5579007B2125 /* AppDelegate.swift */; };
 		B631AE661E6A5579007B2125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE651E6A5579007B2125 /* ViewController.swift */; };
 		B631AE6B1E6A5579007B2125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B631AE6A1E6A5579007B2125 /* Assets.xcassets */; };
@@ -27,6 +29,7 @@
 		B631AE791E6A5579007B2125 /* KonjacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE781E6A5579007B2125 /* KonjacTests.swift */; };
 		E7CB6CBFEB7BE60CB285E528 /* Pods_Konjac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C954629B873DCB931AC6EE /* Pods_Konjac.framework */; };
 		E9EED6221E6A786D00118C37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9EED6211E6A786D00118C37 /* GoogleService-Info.plist */; };
+		E9EED6241E6A9D8700118C37 /* KonjacFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EED6231E6A9D8700118C37 /* KonjacFirebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,8 @@
 		B2C9A2711E6A804800AC0B14 /* PhraseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhraseTableViewCell.xib; sourceTree = "<group>"; };
 		B2C9A2741E6A8B5D00AC0B14 /* RikoModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RikoModalViewController.swift; sourceTree = "<group>"; };
 		B2C9A27C1E6A96E200AC0B14 /* RikoModalViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RikoModalViewStoryboard.storyboard; sourceTree = "<group>"; };
+		B2C9A27E1E6AA27200AC0B14 /* EditViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditViewStoryboard.storyboard; sourceTree = "<group>"; };
+		B2C9A2821E6AA59200AC0B14 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		B631AE601E6A5579007B2125 /* Konjac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Konjac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B631AE631E6A5579007B2125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B631AE651E6A5579007B2125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		B631AE781E6A5579007B2125 /* KonjacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonjacTests.swift; sourceTree = "<group>"; };
 		B631AE7A1E6A5579007B2125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9EED6211E6A786D00118C37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9EED6231E6A9D8700118C37 /* KonjacFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KonjacFirebase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,9 @@
 				B631AE6F1E6A5579007B2125 /* Info.plist */,
 				B2C9A26E1E6A7E9500AC0B14 /* PhrasesViewController.swift */,
 				B2C9A27C1E6A96E200AC0B14 /* RikoModalViewStoryboard.storyboard */,
+				B2C9A2821E6AA59200AC0B14 /* EditViewController.swift */,
+				B2C9A27E1E6AA27200AC0B14 /* EditViewStoryboard.storyboard */,
+				E9EED6231E6A9D8700118C37 /* KonjacFirebase.swift */,
 			);
 			path = Konjac;
 			sourceTree = "<group>";
@@ -254,6 +263,7 @@
 				B2C9A27D1E6A96E200AC0B14 /* RikoModalViewStoryboard.storyboard in Resources */,
 				B2C9A2731E6A804800AC0B14 /* PhraseTableViewCell.xib in Resources */,
 				B631AE6B1E6A5579007B2125 /* Assets.xcassets in Resources */,
+				B2C9A27F1E6AA27200AC0B14 /* EditViewStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C9A2831E6AA59200AC0B14 /* EditViewController.swift in Sources */,
+				E9EED6241E6A9D8700118C37 /* KonjacFirebase.swift in Sources */,
 				B2C9A26A1E6A694800AC0B14 /* UIButton+CornerRadius.swift in Sources */,
 				B631AE661E6A5579007B2125 /* ViewController.swift in Sources */,
 				B2C9A2721E6A804800AC0B14 /* PhraseTableViewCell.swift in Sources */,

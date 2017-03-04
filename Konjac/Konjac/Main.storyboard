@@ -13,7 +13,7 @@
         <scene sceneID="qTG-X6-2ur">
             <objects>
                 <navigationController id="MHV-Xu-Coa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cUQ-1h-POo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cUQ-1h-POo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -116,6 +116,13 @@
                                     <outlet property="delegate" destination="KQr-pe-Lrg" id="ear-Yp-cNH"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLu-1Z-oj9">
+                                <rect key="frame" x="307" y="599" width="48" height="48"/>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="addButtonTap:" destination="KQr-pe-Lrg" eventType="touchUpInside" id="uvX-RZ-yNM"/>
+                                </connections>
+                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="siW-4v-rn9">
                                 <rect key="frame" x="30" y="74" width="315" height="29"/>
                                 <segments>
@@ -126,6 +133,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZLu-1Z-oj9" secondAttribute="trailing" constant="20" id="3GL-FE-C1c"/>
                             <constraint firstItem="siW-4v-rn9" firstAttribute="leading" secondItem="FQV-Y8-tOb" secondAttribute="leading" constant="30" id="9Tc-66-U3O"/>
                             <constraint firstItem="fwU-Ir-xxq" firstAttribute="top" secondItem="siW-4v-rn9" secondAttribute="bottom" constant="10" id="Ojg-Xc-Nj6"/>
                             <constraint firstItem="fwU-Ir-xxq" firstAttribute="leading" secondItem="FQV-Y8-tOb" secondAttribute="leading" id="PB1-MX-M7U"/>
@@ -133,6 +141,7 @@
                             <constraint firstItem="77R-Fc-rNZ" firstAttribute="top" secondItem="fwU-Ir-xxq" secondAttribute="bottom" id="hur-w2-VDp"/>
                             <constraint firstItem="siW-4v-rn9" firstAttribute="top" secondItem="32B-Gc-8eh" secondAttribute="bottom" constant="10" id="k2d-8A-YAh"/>
                             <constraint firstAttribute="trailing" secondItem="siW-4v-rn9" secondAttribute="trailing" constant="30" id="n3C-Z0-5Gf"/>
+                            <constraint firstItem="77R-Fc-rNZ" firstAttribute="top" secondItem="ZLu-1Z-oj9" secondAttribute="bottom" constant="20" id="vms-bo-0jd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -145,4 +154,7 @@
             <point key="canvasLocation" x="1556" y="114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="48" height="48"/>
+    </resources>
 </document>
