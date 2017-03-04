@@ -8,9 +8,13 @@
 
 import UIKit
 import AVFoundation
+import Spring
 
 class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
+    @IBOutlet weak var pauseResumeButton: UIButton!
     @IBOutlet weak var phraseLabel: UILabel!
+    @IBOutlet weak var rikoChanImage: SpringImageView!
+    var isSpeaking = false
 
     var phrase: String?
 
@@ -19,6 +23,10 @@ class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.6)
+        
+        rikoChanImage.animation = "shake"
+        rikoChanImage.animate()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -32,10 +40,6 @@ class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func closeButtonTap(_ sender: Any) {
-        self.dismiss(animated: true)
     }
 
     @IBAction func stopTap(_ sender: Any) {
@@ -66,7 +70,13 @@ class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
     }
 
     func updatePauseResumeButton() {
-        // FIXME
+        if isSpeaking {
+            pauseResumeButton.setImage(UIImage(named: "play2"), for: .normal)
+            isSpeaking = false
+        } else {
+            pauseResumeButton.setImage(UIImage(named: "pause"), for: .normal)
+            isSpeaking = true
+        }
     }
 
 
