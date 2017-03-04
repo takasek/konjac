@@ -10,9 +10,11 @@ import UIKit
 import AVFoundation
 
 class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
-    @IBOutlet weak var phraseLabel: UILabel!
+    @IBOutlet weak var phraseJPNLabel: UILabel!
+    @IBOutlet weak var phraseEngLabel: UILabel!
 
-    var phrase: String?
+    var engPhrase: String?
+    var jpnPhrase: String?
 
     lazy var speaker = Speaker()
 
@@ -25,7 +27,10 @@ class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        guard let s = self.phrase else { return }
+        self.phraseJPNLabel.text = jpnPhrase
+        self.phraseEngLabel.text = engPhrase
+
+        guard let s = self.engPhrase else { return }
         self.speaker.speak(str: s, delegate: self)
     }
 
@@ -67,6 +72,23 @@ class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
 
     func updatePauseResumeButton() {
         // FIXME
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
+                           willSpeakRangeOfSpeechString characterRange: NSRange,
+                           utterance: AVSpeechUtterance) {
+        self.setAttributedTextRange(range: characterRange)
+    }
+
+    func setAttributedTextRange(range: NSRange?) {
+        guard let text = self.phraseEngLabel.text else { return }
+        let mutableString = NSMutableAttributedString(string: text)
+
+        if let r = range {
+            mutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: r)
+        }
+
+        self.phraseEngLabel.attributedText = mutableString
     }
 
 
