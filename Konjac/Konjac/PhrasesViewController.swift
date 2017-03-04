@@ -32,6 +32,11 @@ class PhrasesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func addButtonTap(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "EditViewStoryboard", bundle: Bundle.main)
+        let viewController = storyboard.instantiateInitialViewController() as! EditViewController
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
     /*
     // MARK: - Navigation
