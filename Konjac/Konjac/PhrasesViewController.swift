@@ -56,11 +56,18 @@ class PhrasesViewController: UIViewController {
     */
 
     func modelForIndexPath(indexPath: IndexPath) -> KonjacModel? {
-        if indexPath.row < 0 || indexPath.row >= KonjacFirebase.sharedInstance.konjacSnaps.count {
+        let arr = self.filteredModelArray()
+        if indexPath.row < 0 || indexPath.row >= arr.count {
             return nil
         }
 
-        return KonjacFirebase.sharedInstance.konjacSnaps[indexPath.row]
+        return arr[indexPath.row]
+    }
+
+    func filteredModelArray() -> [KonjacModel] {
+        return KonjacFirebase.sharedInstance.konjacSnaps.filter { model in
+            model.english != nil
+        }
     }
 
 }
@@ -82,7 +89,7 @@ extension PhrasesViewController: UITableViewDelegate {
 
 extension PhrasesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return KonjacFirebase.sharedInstance.konjacSnaps.count
+        return self.filteredModelArray().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
