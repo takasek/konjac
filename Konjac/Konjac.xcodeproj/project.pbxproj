@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B631AE641E6A5579007B2125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE631E6A5579007B2125 /* AppDelegate.swift */; };
+		B631AE661E6A5579007B2125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE651E6A5579007B2125 /* ViewController.swift */; };
+		B631AE691E6A5579007B2125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B631AE671E6A5579007B2125 /* Main.storyboard */; };
+		B631AE6B1E6A5579007B2125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B631AE6A1E6A5579007B2125 /* Assets.xcassets */; };
+		B631AE6E1E6A5579007B2125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B631AE6C1E6A5579007B2125 /* LaunchScreen.storyboard */; };
+		B631AE791E6A5579007B2125 /* KonjacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE781E6A5579007B2125 /* KonjacTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B631AE751E6A5579007B2125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B631AE581E6A5578007B2125 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B631AE5F1E6A5578007B2125;
+			remoteInfo = Konjac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B631AE601E6A5579007B2125 /* Konjac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Konjac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B631AE631E6A5579007B2125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B631AE651E6A5579007B2125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B631AE681E6A5579007B2125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B631AE6A1E6A5579007B2125 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B631AE6D1E6A5579007B2125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B631AE6F1E6A5579007B2125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B631AE741E6A5579007B2125 /* KonjacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KonjacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B631AE781E6A5579007B2125 /* KonjacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonjacTests.swift; sourceTree = "<group>"; };
+		B631AE7A1E6A5579007B2125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B631AE5D1E6A5578007B2125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B631AE711E6A5579007B2125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B631AE571E6A5578007B2125 = {
+			isa = PBXGroup;
+			children = (
+				B631AE621E6A5579007B2125 /* Konjac */,
+				B631AE771E6A5579007B2125 /* KonjacTests */,
+				B631AE611E6A5579007B2125 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B631AE611E6A5579007B2125 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B631AE601E6A5579007B2125 /* Konjac.app */,
+				B631AE741E6A5579007B2125 /* KonjacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B631AE621E6A5579007B2125 /* Konjac */ = {
+			isa = PBXGroup;
+			children = (
+				B631AE631E6A5579007B2125 /* AppDelegate.swift */,
+				B631AE651E6A5579007B2125 /* ViewController.swift */,
+				B631AE671E6A5579007B2125 /* Main.storyboard */,
+				B631AE6A1E6A5579007B2125 /* Assets.xcassets */,
+				B631AE6C1E6A5579007B2125 /* LaunchScreen.storyboard */,
+				B631AE6F1E6A5579007B2125 /* Info.plist */,
+			);
+			path = Konjac;
+			sourceTree = "<group>";
+		};
+		B631AE771E6A5579007B2125 /* KonjacTests */ = {
+			isa = PBXGroup;
+			children = (
+				B631AE781E6A5579007B2125 /* KonjacTests.swift */,
+				B631AE7A1E6A5579007B2125 /* Info.plist */,
+			);
+			path = KonjacTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B631AE5F1E6A5578007B2125 /* Konjac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B631AE7D1E6A5579007B2125 /* Build configuration list for PBXNativeTarget "Konjac" */;
+			buildPhases = (
+				B631AE5C1E6A5578007B2125 /* Sources */,
+				B631AE5D1E6A5578007B2125 /* Frameworks */,
+				B631AE5E1E6A5578007B2125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Konjac;
+			productName = Konjac;
+			productReference = B631AE601E6A5579007B2125 /* Konjac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B631AE731E6A5579007B2125 /* KonjacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B631AE801E6A5579007B2125 /* Build configuration list for PBXNativeTarget "KonjacTests" */;
+			buildPhases = (
+				B631AE701E6A5579007B2125 /* Sources */,
+				B631AE711E6A5579007B2125 /* Frameworks */,
+				B631AE721E6A5579007B2125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B631AE761E6A5579007B2125 /* PBXTargetDependency */,
+			);
+			name = KonjacTests;
+			productName = KonjacTests;
+			productReference = B631AE741E6A5579007B2125 /* KonjacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B631AE581E6A5578007B2125 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = trySwiftHackathon;
+				TargetAttributes = {
+					B631AE5F1E6A5578007B2125 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					B631AE731E6A5579007B2125 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B631AE5F1E6A5578007B2125;
+					};
+				};
+			};
+			buildConfigurationList = B631AE5B1E6A5578007B2125 /* Build configuration list for PBXProject "Konjac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B631AE571E6A5578007B2125;
+			productRefGroup = B631AE611E6A5579007B2125 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B631AE5F1E6A5578007B2125 /* Konjac */,
+				B631AE731E6A5579007B2125 /* KonjacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B631AE5E1E6A5578007B2125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B631AE6E1E6A5579007B2125 /* LaunchScreen.storyboard in Resources */,
+				B631AE6B1E6A5579007B2125 /* Assets.xcassets in Resources */,
+				B631AE691E6A5579007B2125 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B631AE721E6A5579007B2125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B631AE5C1E6A5578007B2125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B631AE661E6A5579007B2125 /* ViewController.swift in Sources */,
+				B631AE641E6A5579007B2125 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B631AE701E6A5579007B2125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B631AE791E6A5579007B2125 /* KonjacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B631AE761E6A5579007B2125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B631AE5F1E6A5578007B2125 /* Konjac */;
+			targetProxy = B631AE751E6A5579007B2125 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B631AE671E6A5579007B2125 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B631AE681E6A5579007B2125 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B631AE6C1E6A5579007B2125 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B631AE6D1E6A5579007B2125 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B631AE7B1E6A5579007B2125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B631AE7C1E6A5579007B2125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B631AE7E1E6A5579007B2125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Konjac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.trySwiftHackathon.Konjac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B631AE7F1E6A5579007B2125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Konjac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.trySwiftHackathon.Konjac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B631AE811E6A5579007B2125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KonjacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.trySwiftHackathon.KonjacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Konjac.app/Konjac";
+			};
+			name = Debug;
+		};
+		B631AE821E6A5579007B2125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KonjacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.trySwiftHackathon.KonjacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Konjac.app/Konjac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B631AE5B1E6A5578007B2125 /* Build configuration list for PBXProject "Konjac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B631AE7B1E6A5579007B2125 /* Debug */,
+				B631AE7C1E6A5579007B2125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B631AE7D1E6A5579007B2125 /* Build configuration list for PBXNativeTarget "Konjac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B631AE7E1E6A5579007B2125 /* Debug */,
+				B631AE7F1E6A5579007B2125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B631AE801E6A5579007B2125 /* Build configuration list for PBXNativeTarget "KonjacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B631AE811E6A5579007B2125 /* Debug */,
+				B631AE821E6A5579007B2125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B631AE581E6A5578007B2125 /* Project object */;
+}
