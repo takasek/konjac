@@ -22,7 +22,7 @@ class Speaker: NSObject, AVSpeechSynthesizerDelegate {
         self.synthesizer.delegate = self
     }
 
-    func speak(str: String, onSpeakRange: @escaping (NSRange?) -> Void) {
+    func speak(str: String, onSpeakRange: ((NSRange?) -> Void)?) {
         if self.synthesizer.isSpeaking { return }
 
         self.speakRangeCompletion = onSpeakRange

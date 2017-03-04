@@ -45,6 +45,7 @@ extension PhrasesViewController: UITableViewDelegate {
         let rootViewController = UIApplication.shared.delegate?.window!?.rootViewController
         rootViewController!.modalPresentationStyle = UIModalPresentationStyle.currentContext
         present(viewController, animated: true)
+        self.speaker.speak(str: "testing testing testing testing", onSpeakRange: nil)
     }
 }
 

@@ -21,14 +21,15 @@ class PhraseTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        if selected, let speaker = self.speaker, let text = self.mainPhrase.text {
-            speaker.speak(str: text) { range in
-                let mutableString = NSMutableAttributedString(string: text)
-                if let r = range {
-                    mutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: r)
-                }
-                self.mainPhrase.attributedText = mutableString
-            }
-        }
+        // This should be handled when presented, not here anymore
+//        if selected, let speaker = self.speaker, let text = self.mainPhrase.text {
+//            speaker.speak(str: text) { range in
+//                let mutableString = NSMutableAttributedString(string: text)
+//                if let r = range {
+//                    mutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: r)
+//                }
+//                self.mainPhrase.attributedText = mutableString
+//            }
+//        }
     }
 }
