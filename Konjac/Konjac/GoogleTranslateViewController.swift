@@ -8,17 +8,39 @@
 
 import UIKit
 
+final class GoogleTranslater {
+    func tranlate(source: String, completion: (String?) -> Void) {
+//        なんかする(source)
+//        なんかおわったら {
+//            completion(result)
+//        }
+
+        completion("こんにゃく")
+    }
+}
+
+
 final class GoogleTranslateViewController: UIViewController {
 
     @IBOutlet weak var sourceTextView: UITextView!
     @IBOutlet weak var destinationTextView: UITextView!
     @IBOutlet weak var translateButton: UIButton!
 
+    private let tranlsater = GoogleTranslater()
+
     @IBAction func saveDidTap(_ sender: UIBarButtonItem) {
         print("action!", sourceTextView.text, destinationTextView.text)
     }
     @IBAction func viewDidTap(_ sender: Any) {
+        view.endEditing(true)
     }
     @IBAction func translateButtonDidTap(_ sender: Any) {
+        view.endEditing(true)
+
+        if let source = sourceTextView.text {
+            tranlsater.tranlate(source: source) { [weak self] (result) in
+                self?.destinationTextView.text = result
+            }
+        }
     }
 }
