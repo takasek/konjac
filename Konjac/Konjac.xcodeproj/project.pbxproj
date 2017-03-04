@@ -15,6 +15,8 @@
 		B2C9A26A1E6A694800AC0B14 /* UIButton+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C9A2691E6A694800AC0B14 /* UIButton+CornerRadius.swift */; };
 		B2C9A26B1E6A694800AC0B14 /* UIButton+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C9A2691E6A694800AC0B14 /* UIButton+CornerRadius.swift */; };
 		B2C9A26F1E6A7E9500AC0B14 /* PhrasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C9A26E1E6A7E9500AC0B14 /* PhrasesViewController.swift */; };
+		B2C9A2721E6A804800AC0B14 /* PhrasesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C9A2701E6A804800AC0B14 /* PhrasesTableViewCell.swift */; };
+		B2C9A2731E6A804800AC0B14 /* PhrasesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C9A2711E6A804800AC0B14 /* PhrasesTableViewCell.xib */; };
 		B631AE641E6A5579007B2125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE631E6A5579007B2125 /* AppDelegate.swift */; };
 		B631AE661E6A5579007B2125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE651E6A5579007B2125 /* ViewController.swift */; };
 		B631AE6B1E6A5579007B2125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B631AE6A1E6A5579007B2125 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		B2C9A2651E6A692200AC0B14 /* HubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HubViewController.swift; sourceTree = "<group>"; };
 		B2C9A2691E6A694800AC0B14 /* UIButton+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+CornerRadius.swift"; sourceTree = "<group>"; };
 		B2C9A26E1E6A7E9500AC0B14 /* PhrasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhrasesViewController.swift; sourceTree = "<group>"; };
+		B2C9A2701E6A804800AC0B14 /* PhrasesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhrasesTableViewCell.swift; sourceTree = "<group>"; };
+		B2C9A2711E6A804800AC0B14 /* PhrasesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhrasesTableViewCell.xib; sourceTree = "<group>"; };
 		B631AE601E6A5579007B2125 /* Konjac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Konjac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B631AE631E6A5579007B2125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B631AE651E6A5579007B2125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		B631AE621E6A5579007B2125 /* Konjac */ = {
 			isa = PBXGroup;
 			children = (
+				B2C9A2701E6A804800AC0B14 /* PhrasesTableViewCell.swift */,
+				B2C9A2711E6A804800AC0B14 /* PhrasesTableViewCell.xib */,
 				B2C9A2681E6A694100AC0B14 /* Extensions */,
 				B631AE631E6A5579007B2125 /* AppDelegate.swift */,
 				B631AE651E6A5579007B2125 /* ViewController.swift */,
@@ -239,6 +245,7 @@
 			files = (
 				B2C9A2631E6A690F00AC0B14 /* Main.storyboard in Resources */,
 				B631AE6E1E6A5579007B2125 /* LaunchScreen.storyboard in Resources */,
+				B2C9A2731E6A804800AC0B14 /* PhrasesTableViewCell.xib in Resources */,
 				B631AE6B1E6A5579007B2125 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +360,7 @@
 			files = (
 				B2C9A26A1E6A694800AC0B14 /* UIButton+CornerRadius.swift in Sources */,
 				B631AE661E6A5579007B2125 /* ViewController.swift in Sources */,
+				B2C9A2721E6A804800AC0B14 /* PhrasesTableViewCell.swift in Sources */,
 				B2C9A26F1E6A7E9500AC0B14 /* PhrasesViewController.swift in Sources */,
 				B2C9A2661E6A692200AC0B14 /* HubViewController.swift in Sources */,
 				B631AE641E6A5579007B2125 /* AppDelegate.swift in Sources */,
