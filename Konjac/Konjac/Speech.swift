@@ -8,11 +8,14 @@
 
 import Foundation
 import AVFoundation
+import UIKit
 
-class Speech: NSObject, AVSpeechSynthesizerDelegate {
+class Speaker: NSObject, AVSpeechSynthesizerDelegate {
     let synthesizer: AVSpeechSynthesizer
-    var active: Bool
+    var attributedString: NSMutableAttributedString
+    var active: Bool { didSet { self.didSetActive() } }
     var enabled: Bool { return !active }
+    var highlightColor: UIColor?
 
     override init() {
         self.synthesizer = AVSpeechSynthesizer()
@@ -23,10 +26,29 @@ class Speech: NSObject, AVSpeechSynthesizerDelegate {
         self.synthesizer.delegate = self
     }
 
-    func speak(text: String) {
+    func didSetActive() {
+        if !active {
+            self.resetAttributedString()
+        }
+    }
+
+    func resetAttributedString() {
+        let newAttributedString = NSAttributedString(string: self.attributedString.string)
+        self.attributedString.setAttributedString(newAttributedString)
+    }
+
+    // NOTE: this is just a hack while prototyping
+    // ----- in the real app, everything should be setting the NSMutableAttributedString
+    func speak(str: String) {
+        self.speak(attrStr: NSMutableAttributedString(string: str), highlightColor: nil)
+    }
+
+    func speak(attrStr: NSMutableAttributedString, highlightColor: UIColor?) {
         if active { return }
-        let utter = AVSpeechUtterance(string: text)
+        self.attributedString = attrStr
+        let utter = AVSpeechUtterance(string: attrStr.string)
         self.synthesizer.speak(utter)
+        self.highlightColor = highlightColor
     }
 
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
@@ -47,5 +69,14 @@ class Speech: NSObject, AVSpeechSynthesizerDelegate {
 
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
         active = false
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
+                           willSpeakRangeOfSpeechString characterRange: NSRange,
+                           utterance: AVSpeechUtterance) {
+        self.resetAttributedString()
+        if let c = self.highlightColor {
+            self.attributedString.addAttribute(NSForegroundColorAttributeName, value: c, range: characterRange)
+        }
     }
 }
