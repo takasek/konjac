@@ -54,7 +54,11 @@ extension PhrasesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "RikoModalViewStoryboard", bundle: Bundle.main)
         let riko = storyboard.instantiateInitialViewController() as! RikoModalViewController
-        riko.phrase = "asta la vista babies" // FIXME: use real data!
+
+        // FIXME: use real data!
+        riko.engPhrase = "asta la vista babies"
+        riko.jpnPhrase = "さよならだぜベイビ"
+        
         let rootViewController = UIApplication.shared.delegate?.window!?.rootViewController
         rootViewController!.modalPresentationStyle = UIModalPresentationStyle.currentContext
         present(riko, animated: true)
