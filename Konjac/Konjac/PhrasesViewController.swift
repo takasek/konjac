@@ -41,8 +41,8 @@ class PhrasesViewController: UIViewController {
 extension PhrasesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // FIXME: this is just a hack
-        let cell = self.tableView(tableView, cellForRowAt: indexPath)
-        guard let label = cell.textLabel else { return }
+        let cell = self.tableView(tableView, cellForRowAt: indexPath) as! PhraseTableViewCell
+        guard let label = cell.mainPhrase else { return }
         let mutableString = NSMutableAttributedString(string: label.text ?? "")
         label.attributedText = mutableString
         self.speaker.speak(attrStr: mutableString, highlightColor: UIColor.red)
