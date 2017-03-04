@@ -56,6 +56,15 @@ class KonjacFirebase: NSObject {
         completion?(konjacSnaps)
         self.konjacHandler = completion
     }
+    
+    func sendNewKonjac(newKonjac: KonjacModel) {
+        var mdata = [String : String]()
+        mdata["question"] = newKonjac.question
+        mdata["japanese"] = newKonjac.japanese
+        mdata["english"] = newKonjac.english
+
+        self.ref.child("phrases").childByAutoId().setValue(mdata)
+    }
 }
 
 struct KonjacModel {
