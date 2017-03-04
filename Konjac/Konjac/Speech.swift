@@ -12,8 +12,7 @@ import UIKit
 
 class Speaker: NSObject, AVSpeechSynthesizerDelegate {
     let synthesizer: AVSpeechSynthesizer
-    var attributedString: NSMutableAttributedString?
-    var highlightColor: UIColor?
+    var speakRangeCompletion: ((NSRange?) -> Void)?
 
     override init() {
         self.synthesizer = AVSpeechSynthesizer()
@@ -23,34 +22,31 @@ class Speaker: NSObject, AVSpeechSynthesizerDelegate {
         self.synthesizer.delegate = self
     }
 
-    func resetAttributedString() {
-        guard let attributedString = self.attributedString else { return }
-        let newAttributedString = NSAttributedString(string: attributedString.string)
-        attributedString.setAttributedString(newAttributedString)
-    }
+    func speak(str: String, onSpeakRange: @escaping (NSRange?) -> Void) {
+        if self.synthesizer.isSpeaking { return }
 
-    // NOTE: this is just a hack while prototyping
-    // ----- in the real app, everything should be setting the NSMutableAttributedString
-    func speak(str: String) {
-        self.speak(attrStr: NSMutableAttributedString(string: str), highlightColor: nil)
-    }
+        self.speakRangeCompletion = onSpeakRange
 
-    func speak(attrStr: NSMutableAttributedString, highlightColor: UIColor?) {
-        if synthesizer.isSpeaking { return }
-
-        self.highlightColor = highlightColor
-        self.attributedString = attrStr
-
-        let utter = AVSpeechUtterance(string: attrStr.string)
-        self.synthesizer.speak(utter)
+        self.synthesizer.speak(AVSpeechUtterance(string: str))
     }
 
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
                            willSpeakRangeOfSpeechString characterRange: NSRange,
                            utterance: AVSpeechUtterance) {
-        self.resetAttributedString()
-        if let c = self.highlightColor, let s = self.attributedString {
-            s.addAttribute(NSForegroundColorAttributeName, value: c, range: characterRange)
+        if let completion = self.speakRangeCompletion {
+            completion(characterRange)
+        }
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        if let completion = self.speakRangeCompletion {
+            completion(nil)
+        }
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        if let completion = self.speakRangeCompletion {
+            completion(nil)
         }
     }
 }

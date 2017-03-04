@@ -39,14 +39,7 @@ class PhrasesViewController: UIViewController {
 }
 
 extension PhrasesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // FIXME: this is just a hack
-        let cell = self.tableView(tableView, cellForRowAt: indexPath) as! PhraseTableViewCell
-        guard let label = cell.mainPhrase else { return }
-        let mutableString = NSMutableAttributedString(string: label.text ?? "")
-        label.attributedText = mutableString
-        self.speaker.speak(attrStr: mutableString, highlightColor: UIColor.red)
-    }
+
 }
 
 extension PhrasesViewController: UITableViewDataSource {
@@ -56,6 +49,7 @@ extension PhrasesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! PhraseTableViewCell
+        cell.speaker = self.speaker
         return cell
     }
 }
