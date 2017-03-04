@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MHV-Xu-Coa">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MHV-Xu-Coa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -73,19 +73,30 @@
                                     <action selector="transitTomainViewTap:" destination="BXj-Y0-s3t" eventType="touchUpInside" id="TLm-Oi-JnE"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dx0-6X-5xb" customClass="GIDSignInButton">
+                                <rect key="frame" x="67" y="597" width="240" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LHJ-QO-zWt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Dq1-lp-vvA" firstAttribute="leading" secondItem="zsR-ag-w1S" secondAttribute="leading" constant="115" id="0UM-bC-Ehn"/>
+                            <constraint firstItem="Dx0-6X-5xb" firstAttribute="leading" secondItem="zsR-ag-w1S" secondAttribute="leadingMargin" constant="51" id="4HR-TO-B75"/>
                             <constraint firstItem="vvc-WN-PKv" firstAttribute="leading" secondItem="zsR-ag-w1S" secondAttribute="leading" constant="220" id="5Ae-vw-dsf"/>
                             <constraint firstItem="Dq1-lp-vvA" firstAttribute="top" secondItem="IxJ-EP-jro" secondAttribute="bottom" constant="200" id="Oi3-Nf-dN7"/>
                             <constraint firstItem="IxJ-EP-jro" firstAttribute="top" secondItem="cAN-6d-U8O" secondAttribute="bottom" constant="161" id="TjT-Ec-pYM"/>
+                            <constraint firstItem="ZxX-cV-KJd" firstAttribute="top" secondItem="Dx0-6X-5xb" secondAttribute="bottom" constant="20" id="Udj-tj-7H3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dx0-6X-5xb" secondAttribute="trailing" constant="52" id="Xkn-nV-Yj3"/>
                             <constraint firstItem="vvc-WN-PKv" firstAttribute="top" secondItem="cAN-6d-U8O" secondAttribute="bottom" constant="254" id="mXa-6S-lQz"/>
                             <constraint firstItem="IxJ-EP-jro" firstAttribute="leading" secondItem="zsR-ag-w1S" secondAttribute="leading" constant="70" id="t8v-uB-ry2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ppC-94-iLz"/>
                     <connections>
+                        <outlet property="signInButton" destination="Dx0-6X-5xb" id="kjy-2X-MDy"/>
                         <outlet property="transitToMainView" destination="IxJ-EP-jro" id="qfY-Tr-piO"/>
                         <outlet property="transitToSpeechTest" destination="Dq1-lp-vvA" id="3Px-sn-kHB"/>
                         <outlet property="transitToTranslate" destination="vvc-WN-PKv" id="nbQ-03-nM3"/>

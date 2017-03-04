@@ -8,16 +8,31 @@
 
 import UIKit
 
-class HubViewController: UIViewController {
+import Firebase
+import GoogleSignIn
+
+class HubViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var transitToMainView: UIButton!
     @IBOutlet weak var transitToTranslate: UIButton!
     @IBOutlet weak var transitToSpeechTest: UIButton!
+
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    var handle: FIRAuthStateDidChangeListenerHandle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         transitToMainView.setCornerRadius(with: 20)
         transitToTranslate.setCornerRadius(with: 20)
         transitToSpeechTest.setCornerRadius(with: 20)
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signInSilently()
+        handle = FIRAuth.auth()?.addStateDidChangeListener() { (auth, user) in
+            if user != nil {
+                print("succeeded to signin")
+            }
+        }
+
     }
     
     @IBAction func transitTomainViewTap(_ sender: Any) {
