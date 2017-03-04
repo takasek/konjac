@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E84E4F3F37EFCBD074C7221 /* Pods_KonjacTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267E6D2566DBD06A189B0895 /* Pods_KonjacTests.framework */; };
 		B631AE641E6A5579007B2125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE631E6A5579007B2125 /* AppDelegate.swift */; };
 		B631AE661E6A5579007B2125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE651E6A5579007B2125 /* ViewController.swift */; };
 		B631AE691E6A5579007B2125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B631AE671E6A5579007B2125 /* Main.storyboard */; };
 		B631AE6B1E6A5579007B2125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B631AE6A1E6A5579007B2125 /* Assets.xcassets */; };
 		B631AE6E1E6A5579007B2125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B631AE6C1E6A5579007B2125 /* LaunchScreen.storyboard */; };
 		B631AE791E6A5579007B2125 /* KonjacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AE781E6A5579007B2125 /* KonjacTests.swift */; };
+		E7CB6CBFEB7BE60CB285E528 /* Pods_Konjac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C954629B873DCB931AC6EE /* Pods_Konjac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		267E6D2566DBD06A189B0895 /* Pods_KonjacTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KonjacTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4191734C28D2350D1E4954E3 /* Pods-Konjac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Konjac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Konjac/Pods-Konjac.debug.xcconfig"; sourceTree = "<group>"; };
+		46C954629B873DCB931AC6EE /* Pods_Konjac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Konjac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47FB005DD329D150E43AA73B /* Pods-KonjacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KonjacTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KonjacTests/Pods-KonjacTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69426D6C746CCAE9B2A0B557 /* Pods-Konjac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Konjac.release.xcconfig"; path = "Pods/Target Support Files/Pods-Konjac/Pods-Konjac.release.xcconfig"; sourceTree = "<group>"; };
+		8046CF8D6DFCC43EA97AAD5E /* Pods-KonjacTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KonjacTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KonjacTests/Pods-KonjacTests.release.xcconfig"; sourceTree = "<group>"; };
 		B631AE601E6A5579007B2125 /* Konjac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Konjac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B631AE631E6A5579007B2125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B631AE651E6A5579007B2125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7CB6CBFEB7BE60CB285E528 /* Pods_Konjac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E84E4F3F37EFCBD074C7221 /* Pods_KonjacTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1864333BB406DAE963C8C98F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4191734C28D2350D1E4954E3 /* Pods-Konjac.debug.xcconfig */,
+				69426D6C746CCAE9B2A0B557 /* Pods-Konjac.release.xcconfig */,
+				47FB005DD329D150E43AA73B /* Pods-KonjacTests.debug.xcconfig */,
+				8046CF8D6DFCC43EA97AAD5E /* Pods-KonjacTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		35A0399695DED117D8F219F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46C954629B873DCB931AC6EE /* Pods_Konjac.framework */,
+				267E6D2566DBD06A189B0895 /* Pods_KonjacTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B631AE571E6A5578007B2125 = {
 			isa = PBXGroup;
 			children = (
 				B631AE621E6A5579007B2125 /* Konjac */,
 				B631AE771E6A5579007B2125 /* KonjacTests */,
 				B631AE611E6A5579007B2125 /* Products */,
+				1864333BB406DAE963C8C98F /* Pods */,
+				35A0399695DED117D8F219F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B631AE7D1E6A5579007B2125 /* Build configuration list for PBXNativeTarget "Konjac" */;
 			buildPhases = (
+				370CB891CAAEDCAAAA3B9F99 /* [CP] Check Pods Manifest.lock */,
 				B631AE5C1E6A5578007B2125 /* Sources */,
 				B631AE5D1E6A5578007B2125 /* Frameworks */,
 				B631AE5E1E6A5578007B2125 /* Resources */,
+				1A4BCCD22406B536678C4AEC /* [CP] Embed Pods Frameworks */,
+				A7CA779884A9E82B72AA9A95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B631AE801E6A5579007B2125 /* Build configuration list for PBXNativeTarget "KonjacTests" */;
 			buildPhases = (
+				D3C825DC95695BD1C6240AFE /* [CP] Check Pods Manifest.lock */,
 				B631AE701E6A5579007B2125 /* Sources */,
 				B631AE711E6A5579007B2125 /* Frameworks */,
 				B631AE721E6A5579007B2125 /* Resources */,
+				A5CA014A1CE285FEA66548FD /* [CP] Embed Pods Frameworks */,
+				24411F60FA5B21BA8896911A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +231,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A4BCCD22406B536678C4AEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Konjac/Pods-Konjac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24411F60FA5B21BA8896911A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KonjacTests/Pods-KonjacTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		370CB891CAAEDCAAAA3B9F99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5CA014A1CE285FEA66548FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KonjacTests/Pods-KonjacTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7CA779884A9E82B72AA9A95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Konjac/Pods-Konjac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3C825DC95695BD1C6240AFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B631AE5C1E6A5578007B2125 /* Sources */ = {
@@ -337,6 +468,7 @@
 		};
 		B631AE7E1E6A5579007B2125 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4191734C28D2350D1E4954E3 /* Pods-Konjac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Konjac/Info.plist;
@@ -349,6 +481,7 @@
 		};
 		B631AE7F1E6A5579007B2125 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69426D6C746CCAE9B2A0B557 /* Pods-Konjac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Konjac/Info.plist;
@@ -361,6 +494,7 @@
 		};
 		B631AE811E6A5579007B2125 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47FB005DD329D150E43AA73B /* Pods-KonjacTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -375,6 +509,7 @@
 		};
 		B631AE821E6A5579007B2125 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8046CF8D6DFCC43EA97AAD5E /* Pods-KonjacTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
