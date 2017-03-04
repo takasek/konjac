@@ -10,43 +10,39 @@ import Foundation
 import AVFoundation
 import UIKit
 
-class Speaker: NSObject, AVSpeechSynthesizerDelegate {
+class Speaker {
     let synthesizer: AVSpeechSynthesizer
     var speakRangeCompletion: ((NSRange?) -> Void)?
 
-    override init() {
+    init() {
         self.synthesizer = AVSpeechSynthesizer()
-
-        super.init()
-
-        self.synthesizer.delegate = self
     }
 
-    func speak(str: String, onSpeakRange: ((NSRange?) -> Void)?) {
+    func speak(str: String, delegate: AVSpeechSynthesizerDelegate) {
         if self.synthesizer.isSpeaking { return }
 
-        self.speakRangeCompletion = onSpeakRange
+        self.synthesizer.delegate = delegate
 
         self.synthesizer.speak(AVSpeechUtterance(string: str))
     }
 
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
-                           willSpeakRangeOfSpeechString characterRange: NSRange,
-                           utterance: AVSpeechUtterance) {
-        if let completion = self.speakRangeCompletion {
-            completion(characterRange)
+    func pauseResume() {
+        if self.synthesizer.isSpeaking && !self.synthesizer.isPaused {
+            self.pause()
+        } else {
+            self.resume()
         }
     }
 
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
-        if let completion = self.speakRangeCompletion {
-            completion(nil)
-        }
+    private func pause() {
+        self.synthesizer.pauseSpeaking(at: .immediate)
     }
 
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        if let completion = self.speakRangeCompletion {
-            completion(nil)
-        }
+    private func resume() {
+        self.synthesizer.continueSpeaking()
+    }
+
+    func stop() {
+        self.synthesizer.stopSpeaking(at: .immediate)
     }
 }

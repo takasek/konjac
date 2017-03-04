@@ -11,7 +11,6 @@ import UIKit
 class PhrasesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
-    lazy var speaker = Speaker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +40,11 @@ class PhrasesViewController: UIViewController {
 extension PhrasesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "RikoModalViewStoryboard", bundle: Bundle.main)
-        let viewController = storyboard.instantiateInitialViewController() as! RikoModalViewController
+        let riko = storyboard.instantiateInitialViewController() as! RikoModalViewController
+        riko.phrase = "asta la vista babies" // FIXME: use real data!
         let rootViewController = UIApplication.shared.delegate?.window!?.rootViewController
         rootViewController!.modalPresentationStyle = UIModalPresentationStyle.currentContext
-        present(viewController, animated: true)
-        self.speaker.speak(str: "testing testing testing testing", onSpeakRange: nil)
+        present(riko, animated: true)
     }
 }
 
@@ -56,7 +55,6 @@ extension PhrasesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! PhraseTableViewCell
-        cell.speaker = self.speaker
         return cell
     }
 }
