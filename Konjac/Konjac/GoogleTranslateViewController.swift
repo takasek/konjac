@@ -7,18 +7,32 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 final class GoogleTranslater {
-    func tranlate(source: String, completion: (String?) -> Void) {
-//        なんかする(source)
-//        なんかおわったら {
-//            completion(result)
-//        }
+    var task: URLSessionDataTask?
+    func tranlate(source: String, completion: @escaping (String?) -> Void) {
 
-        completion("こんにゃく")
+        let encodedSource = source.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? ""
+        let urlString = "https://www.googleapis.com/language/translate/v2?key=AIzaSyBZomq_Mw-KA5UMteg7erVvyhYcYI1bkKw&target=ja&q=\(encodedSource)"
+
+        guard let url = URL(string: urlString) else {
+            completion(nil)
+            return
+        }
+
+        task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let jsonData = data,
+                let json = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) {
+                let result = JSON(json)["data"]["translations"][0]["translatedText"].string
+                completion(result)
+            } else {
+                completion(nil)
+            }
+        }
+        task?.resume()
     }
 }
-
 
 final class GoogleTranslateViewController: UIViewController {
 
