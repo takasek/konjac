@@ -22,9 +22,21 @@ final class GoogleTranslater {
 
 final class GoogleTranslateViewController: UIViewController {
 
-    @IBOutlet weak var sourceTextView: UITextView!
-    @IBOutlet weak var destinationTextView: UITextView!
-    @IBOutlet weak var translateButton: UIButton!
+    @IBOutlet weak var sourceTextView: UITextView!  {
+        didSet {
+            sourceTextView.text = ""
+        }
+    }
+    @IBOutlet weak var destinationTextView: UITextView! {
+        didSet {
+            destinationTextView.text = ""
+        }
+    }
+    @IBOutlet weak var translateButton: UIButton! {
+        didSet {
+            translateButton.setCornerRadius(with: 20)
+        }
+    }
 
     private let tranlsater = GoogleTranslater()
 
