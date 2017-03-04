@@ -17,6 +17,13 @@ class PhrasesViewController: UIViewController {
         tableView.register(UINib(nibName: "PhraseTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableViewAutomaticDimension
+
+        KonjacFirebase.sharedInstance.configureDatabase()
+
+        KonjacFirebase.sharedInstance.addObserveChanges { (konjacModels) in
+            self.tableView.reloadData()
+            print(konjacModels)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +55,14 @@ class PhrasesViewController: UIViewController {
     }
     */
 
+    func modelForIndexPath(indexPath: IndexPath) -> KonjacModel? {
+        if indexPath.row < 0 || indexPath.row >= KonjacFirebase.sharedInstance.konjacSnaps.count {
+            return nil
+        }
+
+        return KonjacFirebase.sharedInstance.konjacSnaps[indexPath.row]
+    }
+
 }
 
 extension PhrasesViewController: UITableViewDelegate {
@@ -55,10 +70,10 @@ extension PhrasesViewController: UITableViewDelegate {
         let storyboard = UIStoryboard(name: "RikoModalViewStoryboard", bundle: Bundle.main)
         let riko = storyboard.instantiateInitialViewController() as! RikoModalViewController
 
-        // FIXME: use real data!
-        riko.engPhrase = "asta la vista babies"
-        riko.jpnPhrase = "さよならだぜベイビ"
-        
+        guard let model = self.modelForIndexPath(indexPath: indexPath) else { return }
+        riko.engPhrase = model.english
+        riko.jpnPhrase = model.japanese
+
         let rootViewController = UIApplication.shared.delegate?.window!?.rootViewController
         rootViewController!.modalPresentationStyle = UIModalPresentationStyle.currentContext
         present(riko, animated: true)
@@ -67,11 +82,14 @@ extension PhrasesViewController: UITableViewDelegate {
 
 extension PhrasesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return KonjacFirebase.sharedInstance.konjacSnaps.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let model = self.modelForIndexPath(indexPath: indexPath) else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! PhraseTableViewCell
+        cell.mainPhrase.text = model.english
+        cell.subPhrase.text = model.japanese
         return cell
     }
 }
