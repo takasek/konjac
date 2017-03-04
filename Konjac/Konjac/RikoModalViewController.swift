@@ -12,9 +12,11 @@ import AVFoundation
 class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
     @IBOutlet weak var phraseJPNLabel: UILabel!
     @IBOutlet weak var phraseEngLabel: UILabel!
+    @IBOutlet weak var pauseResumeButton: UIButton!
 
     var engPhrase: String?
     var jpnPhrase: String?
+    var isSpeaking = false
 
     lazy var speaker = Speaker()
 
@@ -71,7 +73,11 @@ class RikoModalViewController: UIViewController, AVSpeechSynthesizerDelegate {
     }
 
     func updatePauseResumeButton() {
-        // FIXME
+        if isSpeaking {
+            pauseResumeButton.setImage(UIImage(named: "pause"), for: .normal)
+        } else {
+            pauseResumeButton.setImage(UIImage(named: "play2"), for: .normal)
+        }
     }
 
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
